@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotePad App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-indigo-300">
+    <header class="my-10">
+      <h1 class="text-4xl font-bold font-serif text-center">Notepad editor</h1>
+    </header>
+    <main>
+      <section
+        class="border-2 border-black w-3/4 mx-auto bg-indigo-100 rounded-xl p-4"
+      >
+        <div class="buttons flex justify-between border-b-2 border-black pb-2">
+          <!-- font weight buttons -->
+          <div>
+            <button
+              class="font-bold hover:bg-gray-300 rounded px-1"
+              id="text-bold"
+              title="Bold"
+            >
+              B
+            </button>
+            <button
+              class="italic hover:bg-gray-300 rounded px-2"
+              id="text-italic"
+              title="Italic"
+            >
+              I
+            </button>
+            <button
+              class="underline hover:bg-gray-300 rounded px-1"
+              id="text-underline"
+              title="Underline"
+            >
+              U
+            </button>
+          </div>
+          <!-- text-align buttons  -->
+          <div>
+            <button
+              class="hover:bg-gray-300 rounded p-1"
+              title="left"
+              id="text-left"
+            >
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g id="Edit / Text_Align_Left">
+                    <path
+                      id="Vector"
+                      d="M4 18H14M4 14H20M4 10H14M4 6H20"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <button
+              class="hover:bg-gray-300 rounded p-1"
+              title="center"
+              id="text-center"
+            >
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M3 4C2.44772 4 2 4.44772 2 5V5.5C2 6.05228 2.44772 6.5 3 6.5H21C21.5523 6.5 22 6.05228 22 5.5V5C22 4.44772 21.5523 4 21 4H3Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    d="M3 13C2.44772 13 2 13.4477 2 14V14.5C2 15.0523 2.44772 15.5 3 15.5H21C21.5523 15.5 22 15.0523 22 14.5V14C22 13.4477 21.5523 13 21 13H3Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    d="M5 9.5C5 8.94772 5.44772 8.5 6 8.5H18C18.5523 8.5 19 8.94772 19 9.5V10C19 10.5523 18.5523 11 18 11H6C5.44772 11 5 10.5523 5 10V9.5Z"
+                    fill="#000000"
+                  ></path>
+                  <path
+                    d="M6 17.5C5.44772 17.5 5 17.9477 5 18.5V19C5 19.5523 5.44772 20 6 20H18C18.5523 20 19 19.5523 19 19V18.5C19 17.9477 18.5523 17.5 18 17.5H6Z"
+                    fill="#000000"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <button
+              class="hover:bg-gray-300 rounded p-1"
+              title="right"
+              id="text-right"
+            >
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g id="Edit / Text_Align_Right">
+                    <path
+                      id="Vector"
+                      d="M20 18H10M20 14H4M20 10H10M20 6H4"
+                      stroke="#000000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <!-- font styles area  -->
+          <div class="flex justify-center items-center gap-4">
+            <button
+              id="upper-lowerCase"
+              class="font-medium text-2xl text-gray-800"
+            >
+              aA
+            </button>
+
+            <input
+              type="color"
+              name=""
+              id="text-color"
+              class="h-8 w-8"
+              title="color"
+            />
+
+            <input
+              type="number"
+              name=""
+              id="font-size"
+              value="16"
+              class="w-8 font-medium text-center rounded-sm text-gray-600"
+              title="font-size"
+            />
+          </div>
+        </div>
+
+        <!-- text area div  -->
+
+        <div class="mt-4 flex justify-center resize-none">
+          <textarea
+            name=""
+            cols="145"
+            rows="20"
+            id="text-input-field"
+            class="rounded p-4 resize-none w-full min-h-[500px] max-h-[500px] font-mono"
+          ></textarea>
+        </div>
+      </section>
+    </main>
+    <script src="task3.js"></script>
+  </body>
+</html>
